@@ -17,11 +17,15 @@ const ShowScreen = ({ navigation }) => {
   );
 };
 
-ShowScreen.navigationOptions = () => {
+ShowScreen.navigationOptions = ({ navigation }) => {
   return {
-    headerRight: (
-      <TouchableOpacity>
-        <EvilIcons name="pencil" size={30} />
+    headerRight: () => (
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Edit", { id: navigation.getParam("id") })
+        }
+      >
+        <EvilIcons name="pencil" size={35} />
       </TouchableOpacity>
     ),
   };
