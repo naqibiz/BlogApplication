@@ -10,9 +10,9 @@ const ShowScreen = ({ navigation }) => {
     (blogPost) => blogPost.id === navigation.getParam("id")
   );
   return (
-    <View>
-      <Text>{blogPost.title}</Text>
-      <Text>{blogPost.content}</Text>
+    <View style={{marginLeft: 15}}>
+      <Text style={{fontSize: 17, fontWeight: "bold", paddingVertical: 13, textTransform:'uppercase'}}>{blogPost.title}</Text>
+      <Text style={{fontSize: 15, fontWeight: "600", paddingVertical: 5, textTransform:'capitalize'}}>{blogPost.content}</Text>
     </View>
   );
 };
